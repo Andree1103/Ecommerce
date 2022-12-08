@@ -1,4 +1,11 @@
-const items = [
+ import { headerScroll } from "./scroll.js"
+ import { VerProducto } from "./producto.js"
+ import { showProducts } from "./carrito.js"
+ import { load } from "./load.js"
+ 
+ 
+ 
+ /*const items = [
     {
       id: 1,
       name: 'Hoodies',
@@ -28,7 +35,7 @@ const items = [
   function navMenu(){
 
   }
-  
+  */
   const themeBtn = document.getElementById('theme-btn')
   const body = document.body
   const cartBtnOpen = document.getElementById("cart-btn")
@@ -38,12 +45,12 @@ const items = [
   const cartCloseMenu = document.getElementById("nav-close")
   const cartNavMenu = document.getElementById("nav-menu")
   //Modo Noche 
-  const number = (value) =>{
+  /*const number = (value) =>{
     return new Intl.NumberFormat('en-US', {
         style: 'currency',
         currency: 'USD'
     }).format(value)
-  }
+  }*/
 
   const darkThemeChange = () => {
     if ( themeBtn.classList.contains('bx-moon')) {
@@ -67,7 +74,7 @@ cartCloseMenu.addEventListener("click", ()=> cartNavMenu.classList.add("hide"))
 cartBtnOpen.addEventListener("click", ()=> cartContainer.classList.remove("hide"))
 cartBtnClose.addEventListener("click", ()=> cartContainer.classList.add("hide"))
 
-const cartProducts = [
+/*const cartProducts = [
   {
     id: 1,
     name: 'Hoodies',
@@ -86,7 +93,7 @@ const cartProducts = [
     quantity: 15,
     quantitySelected: 2
   },
- /* {
+ {
     id: 3,
     name: 'Sweatshirts',
     price: 24.00,
@@ -94,9 +101,10 @@ const cartProducts = [
     category: 'shirts',
     quantity: 20,
     quantitySelected: 0
-  }*/
-]
-function addProduct(itemId){
+  }
+]*/
+
+/*function addProduct(itemId){
   let ProductoSelected = cartProducts.find(product => product.id === itemId)
   if (ProductoSelected) {
     // Condicion al stock
@@ -108,9 +116,9 @@ function addProduct(itemId){
     cartProducts.push(item)
   }
   showProducts()
-}
+}*/
 
-function showProducts(){
+/*function showProducts(){
   const content = document.getElementById("cart-content")
   let fragment =""
   cartProducts.forEach(product => {
@@ -142,28 +150,31 @@ function showProducts(){
     `
   })
   content.innerHTML = fragment
-}
+}*/
 
-const header = document.querySelector("header")
+/*const header = document.querySelector("header")
 window.addEventListener("scroll", ()=> {
   if(scrollY >=50) {
     header.classList.add("scroll-bg")
   } else {
     header.classList.remove("scroll-bg")
   }
-})
+})*/
 
-const load = () => {
+/*const load = () => {
   const loader = document.getElementById('loader')
   setTimeout( () =>{
     loader.classList.add('view')
     console.log('Ya pasaron 3s')
-  }, 3500)
-}
-
-document.addEventListener('DOMContentLoaded', ( ) =>{ 
+  }, 1000)
+}*/
+window.addEventListener('load', function(){
   load()
+})
+
+document.addEventListener('DOMContentLoaded', function(){ 
+  headerScroll()
+  VerProducto()
   showProducts()
-  number()
 })
 
