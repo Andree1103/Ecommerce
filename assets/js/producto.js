@@ -48,13 +48,14 @@ export const VerProducto = () => {
     productoContainer.innerHTML += html
 
     const productBTN = document.querySelectorAll('.btn_products')
-    productBTN.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const id = parseInt(btn.getAttribute('data-id'))
+    productBTN.forEach(button => {
+        button.addEventListener('click', () => {
+            const id = parseInt(button.getAttribute('data-id'))
             const product = db.methods.find(id)
+
             if (product && product.quantity > 0) {
                 cart.methods.add(id,1)
-                showProducts
+                showProducts()
             }else {
                 window.alert('No hay stock del producto')
             }            

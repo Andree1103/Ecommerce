@@ -22,30 +22,6 @@ export const items = [
       image: 'assets/images/featured3.png',
       category: 'shirts',
       quantity: 20
-    },
-    {
-      id: 4,
-      name: 'Sweatshirts',
-      price: 24.00,
-      image: 'assets/images/featured3.png',
-      category: 'shirts',
-      quantity: 20
-    },
-    {
-      id: 5,
-      name: 'Sweatshirts',
-      price: 24.00,
-      image: 'assets/images/featured3.png',
-      category: 'shirts',
-      quantity: 20
-    },
-    {
-      id: 6,
-      name: 'Sweatshirts',
-      price: 24.00,
-      image: 'assets/images/featured3.png',
-      category: 'shirts',
-      quantity: 20
     }
   ]
   

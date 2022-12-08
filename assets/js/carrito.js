@@ -69,7 +69,7 @@ export function showProducts () {
                     <h3 class="cart_tittle">${product.name}</h3>
                     <span class="cart_stock">Stock: ${product.quantity} | <span class="cart_price">${number(product.price)}</span></span>
                     <span class="cart_subtotal">
-                        Subtotal: ${number(product.price * product.quantitySelected)}
+                        Subtotal: ${number(item.quantity * product.price)}
                     </span>
                     <div class="cart_amount">
                         <div class="cart_amount-content">
@@ -90,9 +90,9 @@ export function showProducts () {
     } else {
         fragment += `
         <div class="cart_empty">
-            <img src"assets/img/empty-cart.png" alt="Imagen no encontrada">
-            <h2>Tu carrito esat vacio</h2>
-            <p>Por favro rellenar el carrito con los productos</p>
+            <img src="./assets/images/empty-cart.png" alt="Imagen no encontrada">
+            <h2 class="cart_vacio">Tu carrito esta vacío</h2>
+            <p>Por favor rellenar el carrito con los productos dando clic en el botón + en la pagina del producto</p>
         </div>
         `
     }

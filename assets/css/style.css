@@ -60,6 +60,7 @@
     width: 100px;
     position: relative;
     animation: loaderAnimacion 2s infinite;
+    fill: var(--first-color);
   }
   @keyframes loaderAnimacion {
     0% {
@@ -95,6 +96,9 @@
     left: 0;
     z-index: 100;
     transition: .4s;
+  }
+  .cart_vacio {
+    text-align: center;
   }
   .navbar {
     height: 3.5rem;
