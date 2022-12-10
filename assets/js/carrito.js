@@ -76,7 +76,7 @@ export function showProducts () {
                             <span class="cart_amount-box minus" data-id="${product.id}">
                                 <i class="bx bx-minus"></i>
                             </span>
-                            <span class="cart_amount-number">${product.quantitySelected} units</span>
+                            <span class="cart_amount-number">${item.quantity} unidades</span>
                             <span class="cart_amount-box plus" data-id="${product.id}">
                                 <i class="bx bx-plus"></i>
                             </span>
